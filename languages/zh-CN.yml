@@ -19,7 +19,7 @@ common:
 widget:
     follow: '关注我'
     recents: '最新文章'
-    links: '链接'
+    links: '友情链接'
     catalogue: '目录'
     subscribe_email: '订阅更新'
     subscribe: '订阅'
@@ -30,7 +30,7 @@ article:
     updated_at: '%s更新'
     more: '阅读更多'
     comments: '评论'
-    read_time: '%s读完'
+    read_time: '大约%s读完'
     word_count:
         one: '大约%d个字'
         other: '大约%d个字'
@@ -48,7 +48,7 @@ donate:
     patreon: 'Patreon'
     buymeacoffee: '送我杯咖啡'
 plugin:
-    backtotop: '回到顶端'
+    backtotop: '回到顶部'
     visit_count: '%s次访问'
     visitor_count: '共%s个访客'
     cookie_consent:
