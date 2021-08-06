@@ -10,6 +10,9 @@ figure.highlight
     margin: 1em 0 1em !important
     border-radius: $radius
 
+    // Transparency
+    background: rgba(40, 44, 52, 0.95)
+
     &.folded
         .highlight-body
             height: 0
@@ -39,6 +42,10 @@ figure.highlight
 
         .line, code .hljs
             line-height: 1.5rem
+        
+        // Set the tab size of the codeblock to 4 spaces.
+        -moz-tab-size: 4 /* Firefox */
+        tab-size: 4
 
     figcaption, .gutter
         background: $codeblock-caption-bg

@@ -30,7 +30,7 @@ article:
     updated_at: '%s更新'
     more: '阅读更多'
     comments: '评论'
-    read_time: '大约%s读完'
+    read_time: '约%s读完'
     word_count:
         one: '大约%d个字'
         other: '大约%d个字'
