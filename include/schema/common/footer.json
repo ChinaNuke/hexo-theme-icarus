@@ -23,6 +23,11 @@
                     }
                 }
             ]
+        },
+        "beian": {
+            "type": "string",
+            "nullable": true,
+            "default": null
         }
     }
 }

@@ -12,7 +12,8 @@ class Footer extends Component {
             author,
             links,
             showVisitorCounter,
-            visitorCounterTitle
+            visitorCounterTitle,
+            beian
         } = this.props;
 
         let footerLogo = '';
@@ -37,6 +38,8 @@ class Footer extends Component {
                             <span dangerouslySetInnerHTML={{ __html: `&copy; ${siteYear} ${author || siteTitle}` }}></span>
                             &nbsp;&nbsp;Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>&nbsp;&&nbsp;
                             <a href="https://github.com/ChinaNuke/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a>
+                            {beian ? <br /> : null}
+                            {beian ? <a href="http://beian.miit.gov.cn/" target="_blank" style="color:inherit">{beian}</a> : null}
                             {showVisitorCounter ? <br /> : null}
                             {showVisitorCounter ? <span id="busuanzi_container_site_uv"
                                 dangerouslySetInnerHTML={{ __html: visitorCounterTitle }}></span> : null}
@@ -76,6 +79,8 @@ module.exports = cacheComponent(Footer, 'common.footer', props => {
         });
     }
 
+    const beian = footer.beian;
+
     return {
         logo,
         logoUrl: url_for(logo),
@@ -85,6 +90,7 @@ module.exports = cacheComponent(Footer, 'common.footer', props => {
         author,
         links,
         showVisitorCounter: plugins && plugins.busuanzi === true,
-        visitorCounterTitle: _p('plugin.visitor_count', '<span id="busuanzi_value_site_uv">0</span>')
+        visitorCounterTitle: _p('plugin.visitor_count', '<span id="busuanzi_value_site_uv">0</span>'),
+        beian
     };
 });
